@@ -14,7 +14,7 @@ class Doctor
   
   def appointments
     Appointment.all.select do |appointment|
-      appointment
+      appointment.doctor
   
   def new_appointment(patient, date)
     Appointment.new(date, patient, self)
