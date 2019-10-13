@@ -22,4 +22,10 @@ class Patient
     Appointment.new(date, self, doctor)
   end
   
+  def doctors
+    self.appointments.map do |appointment|
+      appointment.doctors
+    end.uniq
+  end
+  
 end
